@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# MATLAB
+*.asv
+*.m~
+*.autosave
+slprj/
+*.slxc
+codegen/
+
+# Python (docs/figures/*.py)
+__pycache__/
+*.pyc
