@@ -26,15 +26,6 @@ function [M,d] = h2_opt_input_siso(B,w)
 %   Derived from  |w^H Bd|_2  = d^T B^T Re(w w^T) B d
 %                 with  w w^T  = (a+jb)(a+jb)^T
 %
-%   Scope
-%   -----
-%   Separate input/output method ("Method 2" in R6_siso_rhp_zeros.m and
-%   R7_quadrature_mismatch.m of the AS2026 paper code). The joint H2-optimal
-%   blending vectors reported in the papers come from proprietary code and
-%   are hard-coded in those scripts; the h2_opt_* functions do not reproduce
-%   them.
-%
-
 % ---------- Step 1: complex coupling row -------------------------------
 z = (w') * B;                % 1 x n_u complex row (w' is Hermitian transpose)
 % ---------- Step 2: split into real column vectors ----------------------

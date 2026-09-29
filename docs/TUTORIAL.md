@@ -2,7 +2,7 @@
 
 Build the Goland wing from beam elements to a controlled aeroelastic model, with equations, experiments and pre-rendered results.
 
-This page can be read without MATLAB. To run [`TUTORIAL.m`](../TUTORIAL.m), use MATLAB R2023a or newer with Control System Toolbox. Set the Current Folder to the repository root and run `startup.m`. [`live/TUTORIAL_live.m`](../live/TUTORIAL_live.m) opens in the Live Editor on R2025a or newer. See [CONVENTIONS.md](CONVENTIONS.md) for the coordinate frames, signs, numbering and scaling.
+This page can be read without MATLAB. To run [`TUTORIAL.m`](../live_plain_m/TUTORIAL.m), use MATLAB R2023a or newer with Control System Toolbox. Set the Current Folder to the repository root and run `startup.m`. [`TUTORIAL_live.m`](../TUTORIAL_live.m) opens in the Live Editor on R2025a or newer. See [CONVENTIONS.md](CONVENTIONS.md) for the coordinate frames, signs, numbering and scaling.
 
 ## Contents
 
@@ -663,7 +663,7 @@ The script seeds the random number generator, runs three random starts, asserts 
 - **Open-Source Benchmark Model for Active Flutter Suppression** (AIAA SciTech 2026): this model, its flutter mechanism, and a static gain from two accelerometers to flap 4 as the first controller.
 - **Modal Blending for Active Flutter Suppression** (AIAA SciTech 2026): all eight accelerometers blended into a few signals that look like the modes, so that a low-order controller on flap 4 sees the flutter mode and little else.
 - **Structural Blending for Active Flutter Suppression** (IFASD 2026): blending vectors taken from the structural mode shapes on both sides, eight accelerometers in and eight surfaces out, with a geometric mode-isolation study and a sensor-failure test.
-- **Subspace Geometry and Performance Limits of Modal Blending for AFS** (Aerospace Systems, to be released): what blending can and cannot achieve, derived from the geometry of the modal subspaces.
+- **Subspace Geometry and Performance Tradeoffs of Modal Blending for AFS** (Aerospace Systems, to be released): what blending can and cannot achieve, derived from the geometry of the modal subspaces.
 
 ### Adding a wing
 

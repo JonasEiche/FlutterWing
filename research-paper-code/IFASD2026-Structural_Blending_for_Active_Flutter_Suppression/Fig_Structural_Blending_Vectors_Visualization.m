@@ -3,11 +3,6 @@
 %  Figure B: Structural mode shapes with ky_SB overlay (geometric duality)
 %  Produces: Figures/Fig12_BarChart_Blending_Vectors_SB_vs_H2.pdf
 %            Figures/Fig13_Modeshape_Blending_Overlay.pdf
-%
-%  NOTE: the H2 blending vectors for Figure A come from rpdMat (real
-%  parametric decomposition), a proprietary routine that is not part of this
-%  repository, so the script does not run as shipped. The structural
-%  blending vectors ky_SB / ku_SB and Figure B need only repository code.
 
 
 clearvars
@@ -26,9 +21,6 @@ end
 % ---- Model parameters ---------------------------------------------------
 num_modes = 5;
 num_poles = 6;
-V_inf_ref = 90;
-imuIDX = 1:8;
-ailIDX = 1:8;
 
 [Structure, Aero] = define_RectWing_Structure_Aero(num_modes, num_poles);
 Sfj    = Structure.Sfj;
@@ -57,22 +49,10 @@ end
 Bgx_struct = Sfj*(Q0jj*DRe_jx + sumQLpjjBjx);
 ku_SB = pinv(Bgx_struct(1:2,:));             % 8 x 2
 
-% ---- H2 Optimal Blending Vectors (velocity-dependent) ------------------
-G = build_G_RectWing(V_inf_ref, imuIDX, ailIDX);
-[V, DD] = eig(G.A);
-flutIDX = find((real(diag(DD)) > -1) & (abs(imag(diag(DD))) < 40) ...
-    & (abs(imag(diag(DD))) > 5));
-Am = DD; Bm = V\G.B; Cm = G.C*V;
-Am_flut = Am(flutIDX, flutIDX);
-Bm_flut = Bm(flutIDX, :);
-Cm_flut = Cm(:, flutIDX);
-cmG_flut = ss(Am_flut, Bm_flut, Cm_flut, 0);
-alpha_eig = eig(Am_flut);
-wn = abs(alpha_eig(1));
-Miwn = evalfr(cmG_flut, 1i*wn);
-[~, info] = rpdMat(Miwn, 3);
-ky_H2 = info.ky;   % 8 x 1 (complex)
-ku_H2 = info.ku;   % 8 x 1 (complex)
+% ---- H2 Optimal Blending Vectors (V_inf = 90 m/s, 8 IMUs, 8 AIL) --------
+% The code for the calculation of the H_2 optimal blending vectors is proprietary, hence hardcoded here:
+ky_H2 = [-0.099544537390600;-0.320113549928847;-0.532225871772634;-0.699695797290769;0.076443526375992;0.180003212532740;0.213141230616535;0.176367966086539];
+ku_H2 = [0.044984777487334;0.311962575366850;0.447659003359420;0.560303866429342;0.115582305723231;0.268015425550478;0.385831765058990;0.390203827098918];
 
 % ---- Labels and positions -----------------------------------------------
 labels = {'F1','F2','F3','F4','S1','S2','S3','S4'};

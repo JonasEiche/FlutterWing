@@ -29,15 +29,12 @@ follow these rules already.
 
 | Files | Generator |
 |---|---|
-| `docs/figures/tutorial/*.png`, `goland_flutter_mode.gif`, `numbers.txt` | `docs/make_tutorial_figures.m` |
 | `docs/figures/tutorial/generalized_plant.svg` | `docs/figures/make_generalized_plant.py` |
 | `docs/figures/DLM_FEM_Coupling.svg`, `.png` | `docs/figures/make_coupling_diagram.py` |
-| `docs/figures/quickstart_vg.png`, `afs_hero.gif` | `docs/figures/make_readme_figures.m` |
+| `docs/figures/quickstart_vg.png` | `docs/figures/make_readme_figures.m` |
 | `docs/figures/virtual_flight.gif` | `docs/figures/make_virtual_flight_gif.m` |
-| `docs/figures/wordmark.svg`, `mark.svg`, `social_preview.svg`, `.png` | `docs/figures/make_wordmark.py` (PNG command in its header) |
-| `docs/figures/wing_layout.svg` | `docs/figures/src/wing_layout.tex` (recipe in its header), then `src/relabel_wing_layout.py` |
+| `docs/figures/wordmark.svg`, `mark.svg` | `docs/figures/make_wordmark.py` |
 | `docs/figures/pipeline.svg` | written by hand |
-| `live/QUICKSTART_live.m`, `live/TUTORIAL_live.m` | `docs/make_live_scripts.m` |
 
 Run the MATLAB generators from the repo root after `startup.m`. Run the Python generators with
 `uv run --with fonttools --with uharfbuzz --with resvg-py docs/figures/<script>.py`.

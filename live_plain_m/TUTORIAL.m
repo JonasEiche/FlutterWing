@@ -1033,7 +1033,7 @@ fprintf('u_z_ddot scale Kff11/Mff11 = %.4g (= omega_1^2)\n', Kff(1,1)/Mff(1,1))
 % - **Structural Blending for Active Flutter Suppression** (IFASD 2026): blending vectors taken
 %   from the structural mode shapes on both sides, eight accelerometers in and eight surfaces
 %   out, with a geometric mode-isolation study and a sensor-failure test.
-% - **Subspace Geometry and Performance Limits of Modal Blending for AFS** (Aerospace Systems,
+% - **Subspace Geometry and Performance Tradeoffs of Modal Blending for AFS** (Aerospace Systems,
 %   to be released): what blending can and cannot achieve, derived from the geometry of the
 %   modal subspaces.
 %

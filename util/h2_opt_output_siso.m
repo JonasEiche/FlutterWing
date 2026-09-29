@@ -21,13 +21,6 @@ function [M,h] = h2_opt_output_siso(C,v)
 %     a = Re(z),  b = Im(z)
 %     |h^T C v|_2 = h^T (a a^T + b b^T) h  → Rayleigh quotient.
 %
-%   Scope
-%   -----
-%   Separate input/output method ("Method 2" in R6_siso_rhp_zeros.m and
-%   R7_quadrature_mismatch.m of the AS2026 paper code). The joint H2-optimal
-%   blending vectors reported in the papers come from proprietary code and
-%   are hard-coded in those scripts; the h2_opt_* functions do not reproduce
-%   them.
 %
 
 

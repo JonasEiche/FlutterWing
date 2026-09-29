@@ -33,13 +33,6 @@ function [D,H2] = h2_opt_input_mimo(B,W)
 %   If you want the *true* H2 energy   |w_k^H B d|_2 / (−2sigma_k),
 %   multiply each rank-2 term by 1/(−2sigma_k) inside the loop.
 %
-%   Scope
-%   -----
-%   Separate input/output method ("Method 2" in R6_siso_rhp_zeros.m and
-%   R7_quadrature_mismatch.m of the AS2026 paper code). The joint H2-optimal
-%   blending vectors reported in the papers come from proprietary code and
-%   are hard-coded in those scripts; the h2_opt_* functions do not reproduce
-%   them.
 %
 % -------------------------------------------------------------------------
 

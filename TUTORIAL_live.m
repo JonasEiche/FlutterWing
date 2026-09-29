@@ -590,7 +590,7 @@ fprintf('u_z_ddot scale Kff11/Mff11 = %.4g (= omega_1^2)\n', Kff(1,1)/Mff(1,1))
 %[text] - **Open-Source Benchmark Model for Active Flutter Suppression** (AIAA SciTech 2026): this model, its flutter mechanism, and a static gain from two accelerometers to flap 4 as the first controller.
 %[text] - **Modal Blending for Active Flutter Suppression** (AIAA SciTech 2026): all eight accelerometers blended into a few signals that look like the modes, so that a low-order controller on flap 4 sees the flutter mode and little else.
 %[text] - **Structural Blending for Active Flutter Suppression** (IFASD 2026): blending vectors taken from the structural mode shapes on both sides, eight accelerometers in and eight surfaces out, with a geometric mode-isolation study and a sensor-failure test.
-%[text] - **Subspace Geometry and Performance Limits of Modal Blending for AFS** (Aerospace Systems, to be released): what blending can and cannot achieve, derived from the geometry of the modal subspaces. \
+%[text] - **Subspace Geometry and Performance Tradeoffs of Modal Blending for AFS** (Aerospace Systems, to be released): what blending can and cannot achieve, derived from the geometry of the modal subspaces. \
 %[text] **Adding a wing**
 %[text] Copy `define/define_Goland_Structure_Aero.m`, change the numbers of chapter 1, adjust the flap panels and the hinge points to your grid. Then copy `build_G_Goland.m` and `build_P_Goland.m` and replace the define call and the surface count. The new wing then has entry points with the same signatures, so `getEigenvalueModeshape`, `Vg_plot`, `simulate_afs_switch` and `animate_wing` work on it unchanged.
 %[text] **Citing**

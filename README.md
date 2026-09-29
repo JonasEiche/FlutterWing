@@ -9,7 +9,7 @@
 
 FlutterWing is your starting point into aeroelastic control. A beam finite element method coupled with doublet-lattice unsteady aerodynamics. Rogers rational function approximation for frequency- to time-domain conversion and PT2 actuator dynamics in a self-contained MATLAB model.
 
-[Understand the model](docs/TUTORIAL.md) · [Reproduce a paper](research-paper-code/README.md)
+[Understand the model](docs/TUTORIAL.md) · [Reproduce a paper](#papers)
 
 <div align="center">
 <img src="docs/figures/virtual_flight.gif" width="700" alt="Virtual flight of the Goland wing through its flutter boundary: the velocity ramps up under a modal disturbance, the flutter mode grows, the controller switches on, the flap turns blue and the oscillation is damped while the velocity keeps rising.">
@@ -22,10 +22,10 @@ You need MATLAB with Control System Toolbox. Clone or download this repository a
 
 ```matlab
 run('startup.m'); % to set the matlab path
-QUICKSTART.m
+QUICKSTART
 ```
 
-The example builds the RectWing. A rectangular wing modelled loosely after the bending-torsion flutter example of the Wright Cooper textbook on aeroelasticity. The [live-script version](live/QUICKSTART_live.m) opens in the Live Editor on R2025a or newer.
+The example builds the RectWing. A rectangular wing modelled loosely after the bending-torsion flutter example of the Wright Cooper textbook on aeroelasticity. The [live-script version](QUICKSTART_live.m) opens in the Live Editor on R2025a or newer.
 
 For just the model and V-g plot, use these calls after `startup.m`:
 
@@ -62,7 +62,7 @@ A wing definition is geometry, beam properties, and panel grid. The structural b
 
 ## Learn the physics
 
-The tutorial uses the Goland wing, the textbook case for bending-torsion flutter. [docs/TUTORIAL.md](docs/TUTORIAL.md) reads all figures and equations. [TUTORIAL.m](TUTORIAL.m) runs alongside in MATLAB. The tutorial builds the wing from the beam element to a virtual flight through the flutter boundary. The coordinate frames, sign rules and numberings of the code may be found in [docs/CONVENTIONS.md](docs/CONVENTIONS.md).
+The tutorial uses the Goland wing, the textbook case for bending-torsion flutter. [docs/TUTORIAL.md](docs/TUTORIAL.md) reads all figures and equations. [TUTORIAL.m](live_plain_m/TUTORIAL.m) runs alongside in MATLAB. The tutorial builds the wing from the beam element to a virtual flight through the flutter boundary. The coordinate frames, sign rules and numberings of the code may be found in [docs/CONVENTIONS.md](docs/CONVENTIONS.md).
 
 
 
@@ -73,7 +73,7 @@ The tutorial uses the Goland wing, the textbook case for bending-torsion flutter
 | Open-Source Benchmark Model for Active Flutter Suppression | AIAA SciTech DOI: [10.2514/6.2026-1555](https://doi.org/10.2514/6.2026-1555) | [folder](research-paper-code/SciTech2026-Open-Source_Benchmark_Model_for_Active_Flutter_Suppression) |
 | Modal Blending for Active Flutter Suppression | AIAA SciTech DOI: [10.2514/6.2026-1556](https://doi.org/10.2514/6.2026-1556) | [folder](research-paper-code/SciTech2026-Modal_Blending_for_Active_Flutter_Suppression) |
 | Structural Blending for Active Flutter Suppression | IFASD 2026| [folder](research-paper-code/IFASD2026-Structural_Blending_for_Active_Flutter_Suppression) |
-| Subspace Geometry and Performance Limits of Modal Blending for AFS | *Aerospace Systems* to appear | [folder](research-paper-code/AS2026-Subspace-Geometry-and-Performance-Limits-of-Modal-Blending-for-AFS) |
+| Subspace Geometry and Performance Tradeoffs of Modal Blending for AFS | *Aerospace Systems* to appear | [folder](research-paper-code/AS2026-Subspace-Geometry-and-Performance-Tradeoffs-of-Modal-Blending-for-AFS) |
 
 
 ## Citing
